@@ -1,0 +1,106 @@
+[debug] [2025-03-02T00:58:41.402Z] ----------------------------------------------------------------------
+[debug] [2025-03-02T00:58:41.403Z] Command:       /Users/devenzivanovic/.nvm/versions/node/v22.13.1/bin/node /Users/devenzivanovic/.nvm/versions/node/v22.13.1/bin/firebase deploy
+[debug] [2025-03-02T00:58:41.403Z] CLI Version:   13.30.0
+[debug] [2025-03-02T00:58:41.403Z] Platform:      darwin
+[debug] [2025-03-02T00:58:41.403Z] Node Version:  v22.13.1
+[debug] [2025-03-02T00:58:41.404Z] Time:          Sat Mar 01 2025 19:58:41 GMT-0500 (Eastern Standard Time)
+[debug] [2025-03-02T00:58:41.404Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-02T00:58:41.497Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-02T00:58:41.497Z] > authorizing via signed-in user (devman1302@gmail.com)
+[debug] [2025-03-02T00:58:41.497Z] [iam] checking project andrewapp-b8a7d for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-03-02T00:58:41.498Z] Checked if tokens are valid: false, expires at: 1740868447492
+[debug] [2025-03-02T00:58:41.498Z] Checked if tokens are valid: false, expires at: 1740868447492
+[debug] [2025-03-02T00:58:41.498Z] > refreshing access token with scopes: []
+[debug] [2025-03-02T00:58:41.499Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-03-02T00:58:41.499Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-03-02T00:58:42.761Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-03-02T00:58:42.761Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-03-02T00:58:42.770Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/andrewapp-b8a7d:testIamPermissions [none]
+[debug] [2025-03-02T00:58:42.770Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/andrewapp-b8a7d:testIamPermissions x-goog-quota-user=projects/andrewapp-b8a7d
+[debug] [2025-03-02T00:58:42.771Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/andrewapp-b8a7d:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-02T00:58:42.960Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/andrewapp-b8a7d:testIamPermissions 200
+[debug] [2025-03-02T00:58:42.960Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/andrewapp-b8a7d:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-02T00:58:42.961Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:42.961Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:42.961Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/andrewapp-b8a7d [none]
+[debug] [2025-03-02T00:58:43.449Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/andrewapp-b8a7d 200
+[debug] [2025-03-02T00:58:43.449Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/andrewapp-b8a7d {"projectId":"andrewapp-b8a7d","projectNumber":"669104002606","displayName":"AndrewApp","name":"projects/andrewapp-b8a7d","resources":{"hostingSite":"andrewapp-b8a7d"},"state":"ACTIVE","etag":"1_b27c58ab-8d52-490f-97ca-83a3eebe4176"}
+[info] 
+[info] === Deploying to 'andrewapp-b8a7d'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-03-02T00:58:43.456Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:43.456Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:43.456Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/versions [none]
+[debug] [2025-03-02T00:58:43.456Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-03-02T00:58:44.718Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/versions 200
+[debug] [2025-03-02T00:58:44.718Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/versions {"name":"projects/669104002606/sites/andrewapp-b8a7d/versions/9559f03430917f5c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[andrewapp-b8a7d]: beginning deploy... 
+[info] i  hosting[andrewapp-b8a7d]: found 38 files in build 
+[debug] [2025-03-02T00:58:44.740Z] [hosting] uploading with 200 concurrency
+[debug] [2025-03-02T00:58:44.971Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:44.971Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:44.972Z] [hosting] hash cache [YnVpbGQ] stored for 38 files
+[debug] [2025-03-02T00:58:44.972Z] [hosting][hash queue][FINAL] {"max":225,"min":14,"avg":47.026315789473685,"active":0,"complete":38,"success":38,"errored":0,"retried":0,"total":38,"elapsed":229}
+[debug] [2025-03-02T00:58:44.972Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/669104002606/sites/andrewapp-b8a7d/versions/9559f03430917f5c:populateFiles [none]
+[debug] [2025-03-02T00:58:44.972Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/669104002606/sites/andrewapp-b8a7d/versions/9559f03430917f5c:populateFiles {"files":{"/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/manifest.json":"4e1d3adad9ce7e17c0d13fac197f1c27091906f4ecf3909c9f51247bff345118","/index.html":"e2a3b34fdad47f9f7765afc0d80cc52448f3e9e1c256d99f88e9400b900d29e2","/logo192.png":"f66564670b5bfe49f3f04a5b63107bae60f4a7736f1d3b83aa0115f7acf45150","/favicon.ico":"1463be9bedc82e16f9364eec7a1f5152cbe56229401381eed65c1496cb884407","/logo512.png":"2356e0b814e58a349935c8de17226873d615d088a867d591fef48a64c80c9a2f","/cleanerLogo.png":"c7b44f7a7b1517008362d4062e1d1e6ecfd5756fe689b372fa4b8c65abdca7f1","/asset-manifest.json":"0b85513440132af9a36ce50f45e55d3c259cec35604247c004f0334bd3b68bfe","/static/js/main.8ffdeebb.js.LICENSE.txt":"f49e09c54c602f3b9fc995d87f03cac9054ccf5ff4e41a2f1bc0fd63c0c201c4","/static/css/main.0a29e746.css":"091a2616dbc43304a25448f5b26c6781481ffee61b9e397afe9ca16dfc6f29d6","/static/css/main.0a29e746.css.map":"e85d3b9f6bd2c911031428db17a860fb2a812f52f61dc12d152b83c6d661e55d","/whiteBG.jpeg":"b4f82637bab4001591a72bfc9b965de443c13b744a8255e518258ec33bc4c2e7","/Transparent.png":"d7fe28b92487eebc530f10f078b5a28c62747071ff7ba7dbf52f2ac4e62e2c52","/static/media/ChakraPetch-Regular.f4019d33aae25f6d8eaf.ttf":"15bc24a33457e6de23c17450d6250913b1f23f42db9228ad154dc71ce3a27f7f","/static/media/ChakraPetch-SemiBold.9520da44cd31654efa7e.ttf":"0da26b5e6954c8100d0b1b809c41aa9cf3d30360bf074c8d2d90648d64eb5c97","/static/media/ChakraPetch-Italic.755cfc163d33ad4636ae.ttf":"f3001b0e1e164df90b752e96f531b992f1b6340bc67d7e504f2b1af6d659c4a5","/static/media/ChakraPetch-Light.8dabc1fc6d290dfe2e85.ttf":"448ace9d4d0bd6a8a7e67d24aa8052ade0710e7f38c55f3e22b603dd18626746","/static/media/ChakraPetch-Medium.8bc62e852b36ebc0b674.ttf":"6d15c6b82d04a98d549936fd00f67dd92b637d2d0a759f1afa9da71f1622b808","/static/media/ChakraPetch-Bold.ac19a2618ff468c4d7a2.ttf":"8addb650730b3ef558e6a1e3741bcb358fa032e83d2fdfdc43f871ded996fdab","/static/media/ChakraPetch-BoldItalic.928ac528b263e4fc23ae.ttf":"7f9dae2d82da3774abf940191319ff8e1e03511f555e02202820eb1de727bdfd","/cutout.jpg":"bdf58f63c3119be69172f58ff89e073fc2e42b958bc304c5046929ab527c4f49","/croppedCutout.png":"3878a9723c0f693f177e47da1ec227de9608f1678b4d0f62364b92ea52681ec0","/heroimage.jpeg":"d2cbb2c8a2b90426fac6c7e0ba868bbbf327a9f43018944beebf4345c4b47d1e","/spencer.jpeg":"35d57edde175552e7971528ebba74b0ada9d48c0b3175d66576212357354bf50","/blackBg.png":"ae2a2e51ad6ff6cc9489b0f387d9f4899146166c9e1c93eebfdd79a8275319ae","/dylan.jpeg":"60ae0cf4cad29e9eb93158e8ae1276ede316a9dd96cfc9c2c84f7a9325539573","/deven.jpeg":"d8c78ebfa8337a7fe25d0fdede1d75c2e9c847c7f6f8f7e530e2203c5d2e175b","/IMG_9586.jpg":"3089993b2fd099c4a12f522a6005c704f108cc7321743cdd5ab6fc677522d4bc","/static/js/main.8ffdeebb.js":"613f09677d33e967844c3330aa5f24478536d36ee7d553b25e97257851b5767c","/IMG_9583.jpg":"fb34e98713039190f9eb25a5249275cd8ec40b43237980d55c6703dd1d129d94","/IMG_9587.jpg":"274483a950d2e83d312152fcef468b85a0379b3345481e4580804bdae6a64f44","/cutoutAndrew.png":"600066ad30969bd69a45f36c7aa242b7a713174cd554f5a8e3765f43df8dfdfe","/andrewBackground.png":"d02750b3c539b5c54995749ce2116c6a1ef559bf497cf9a6f495a36e5223d36e","/IMG_9588.jpg":"129e0725dd68c20fbef6d5ab15df0426a2c35794400637706f3ce52d035436dc","/1.png":"95eaf0cc469591cf4460ed7258cc305cc29caf40b5815a50fca5318ec9046c2f","/IMG_9261.jpg":"f85e6a88552cbc825160b9fde1fc8c49458bc46efd9efd2266918f8c071dcd84","/IMG_3419.jpg":"5133f2929db18830a2afff4e5a48d3a5049b023a8f1513d02e745dc329a4bb13","/static/js/main.8ffdeebb.js.map":"8a77f61f44018a13ac86808c8c4ea53716f51b9a9c0859daf56b61160f4ad3b6"}}
+[debug] [2025-03-02T00:58:45.374Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/669104002606/sites/andrewapp-b8a7d/versions/9559f03430917f5c:populateFiles 200
+[debug] [2025-03-02T00:58:45.374Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/669104002606/sites/andrewapp-b8a7d/versions/9559f03430917f5c:populateFiles {"uploadRequiredHashes":["613f09677d33e967844c3330aa5f24478536d36ee7d553b25e97257851b5767c","8a77f61f44018a13ac86808c8c4ea53716f51b9a9c0859daf56b61160f4ad3b6","e2a3b34fdad47f9f7765afc0d80cc52448f3e9e1c256d99f88e9400b900d29e2","0b85513440132af9a36ce50f45e55d3c259cec35604247c004f0334bd3b68bfe"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files"}
+[debug] [2025-03-02T00:58:45.375Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:45.375Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:45.375Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:45.375Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:45.375Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:45.375Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:45.376Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:45.376Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:45.376Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/613f09677d33e967844c3330aa5f24478536d36ee7d553b25e97257851b5767c [none]
+[debug] [2025-03-02T00:58:45.376Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/613f09677d33e967844c3330aa5f24478536d36ee7d553b25e97257851b5767c [stream]
+[debug] [2025-03-02T00:58:45.378Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/8a77f61f44018a13ac86808c8c4ea53716f51b9a9c0859daf56b61160f4ad3b6 [none]
+[debug] [2025-03-02T00:58:45.378Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/8a77f61f44018a13ac86808c8c4ea53716f51b9a9c0859daf56b61160f4ad3b6 [stream]
+[debug] [2025-03-02T00:58:45.379Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/e2a3b34fdad47f9f7765afc0d80cc52448f3e9e1c256d99f88e9400b900d29e2 [none]
+[debug] [2025-03-02T00:58:45.379Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/e2a3b34fdad47f9f7765afc0d80cc52448f3e9e1c256d99f88e9400b900d29e2 [stream]
+[debug] [2025-03-02T00:58:45.381Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/0b85513440132af9a36ce50f45e55d3c259cec35604247c004f0334bd3b68bfe [none]
+[debug] [2025-03-02T00:58:45.381Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/0b85513440132af9a36ce50f45e55d3c259cec35604247c004f0334bd3b68bfe [stream]
+[debug] [2025-03-02T00:58:45.384Z] [hosting][populate queue][FINAL] {"max":405,"min":405,"avg":405,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":413}
+[debug] [2025-03-02T00:58:45.384Z] [hosting] uploads queued: 4
+[debug] [2025-03-02T00:58:46.222Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/0b85513440132af9a36ce50f45e55d3c259cec35604247c004f0334bd3b68bfe 200
+[debug] [2025-03-02T00:58:46.222Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/0b85513440132af9a36ce50f45e55d3c259cec35604247c004f0334bd3b68bfe [stream]
+[debug] [2025-03-02T00:58:46.226Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/e2a3b34fdad47f9f7765afc0d80cc52448f3e9e1c256d99f88e9400b900d29e2 200
+[debug] [2025-03-02T00:58:46.226Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/e2a3b34fdad47f9f7765afc0d80cc52448f3e9e1c256d99f88e9400b900d29e2 [stream]
+[debug] [2025-03-02T00:58:46.227Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/613f09677d33e967844c3330aa5f24478536d36ee7d553b25e97257851b5767c 200
+[debug] [2025-03-02T00:58:46.227Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/613f09677d33e967844c3330aa5f24478536d36ee7d553b25e97257851b5767c [stream]
+[debug] [2025-03-02T00:58:46.628Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/8a77f61f44018a13ac86808c8c4ea53716f51b9a9c0859daf56b61160f4ad3b6 200
+[debug] [2025-03-02T00:58:46.628Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/andrewapp-b8a7d/versions/9559f03430917f5c/files/8a77f61f44018a13ac86808c8c4ea53716f51b9a9c0859daf56b61160f4ad3b6 [stream]
+[debug] [2025-03-02T00:58:46.629Z] [hosting][upload queue][FINAL] {"max":1254,"min":847,"avg":951.25,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":1255}
+[info] ✔  hosting[andrewapp-b8a7d]: file upload complete 
+[debug] [2025-03-02T00:58:46.630Z] [hosting] deploy completed after 1909ms
+[debug] [2025-03-02T00:58:46.630Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "andrewapp-b8a7d"
+    },
+    "version": "projects/669104002606/sites/andrewapp-b8a7d/versions/9559f03430917f5c"
+  }
+]
+[info] i  hosting[andrewapp-b8a7d]: finalizing version... 
+[debug] [2025-03-02T00:58:46.632Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:46.632Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:46.632Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/versions/9559f03430917f5c updateMask=status%2Cconfig
+[debug] [2025-03-02T00:58:46.632Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/versions/9559f03430917f5c {"status":"FINALIZED","config":{}}
+[debug] [2025-03-02T00:58:47.149Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/versions/9559f03430917f5c 200
+[debug] [2025-03-02T00:58:47.149Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/versions/9559f03430917f5c {"name":"projects/669104002606/sites/andrewapp-b8a7d/versions/9559f03430917f5c","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-03-02T00:58:44.016088Z","createUser":{"email":"Devman1302@gmail.com"},"finalizeTime":"2025-03-02T00:58:47.142541Z","finalizeUser":{"email":"Devman1302@gmail.com"}}
+[debug] [2025-03-02T00:58:47.149Z] [hosting] finalized version for andrewapp-b8a7d:[object Object]
+[info] ✔  hosting[andrewapp-b8a7d]: version finalized 
+[info] i  hosting[andrewapp-b8a7d]: releasing new version... 
+[debug] [2025-03-02T00:58:47.149Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:47.149Z] Checked if tokens are valid: true, expires at: 1740880721761
+[debug] [2025-03-02T00:58:47.150Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/channels/live/releases versionName=projects%2F669104002606%2Fsites%2Fandrewapp-b8a7d%2Fversions%2F9559f03430917f5c
+[debug] [2025-03-02T00:58:47.150Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/andrewapp-b8a7d/channels/live/releases {}

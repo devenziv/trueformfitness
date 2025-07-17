@@ -1,0 +1,95 @@
+/* Background Image */
+.signup-page {
+    background-image: url('/cutout.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Signup Container */
+  .signup-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+  }
+  
+  /* Form Elements */
+  .signup-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #ff5a5f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .signup-btn:hover {
+    background-color: #ff333a;
+    transform: scale(1.05);
+  }
+  
+  /* Success and Error Messages */
+  .error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .success {
+    color: green;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  @media only screen and (max-width: 480px) {  
+    .hamburger {
+    display: block !important;
+    font-size: 2rem !important;
+    color: white !important;
+    cursor: pointer !important;
+    padding: 10px !important;
+    position: absolute !important;
+    top: 5px !important;
+    right: 70px !important; /* Move it left a bit */
+  }}
