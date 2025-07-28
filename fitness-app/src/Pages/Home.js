@@ -169,6 +169,25 @@ function Home() {
             </li>
             <li>
               <Link
+                to="shop-now"
+                smooth={true}
+                duration={500}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  fontWeight: "bold",
+                  padding: "10px 15px",
+                  borderRadius: "5px",
+                  transition: "all 0.3s ease",
+                  display: "block",
+                  textAlign: "center",
+                }}
+              >
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="intro-container"
                 smooth={true}
                 duration={500}
@@ -308,6 +327,280 @@ function Home() {
   </div>
 </Element>
 
+{/* Store Section - Moved here as second section */}
+<Element 
+  name="shop-now" 
+  className="store-section"
+  style={{
+    background: "linear-gradient(180deg, #2a2a2a 0%, #4a4a4a 25%, #6a6a6a 50%, #9a9a9a 75%, #f0f0f0 100%)",
+    padding: "80px 20px",
+    textAlign: "center",
+    borderTop: "5px solid #008080"
+  }}
+>
+  <style>
+    {`
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        50% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+      
+      @keyframes ringRotate {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    `}
+  </style>
+  <div style={{
+    maxWidth: "1200px",
+    margin: "0 auto"
+  }}>
+    <h2 
+      style={{ 
+        fontSize: "3rem", 
+        fontWeight: "bold",
+        color: "white",
+        marginBottom: "20px",
+        position: "relative",
+        overflow: "hidden"
+      }}
+    >
+      <span style={{
+        background: "linear-gradient(90deg, white 0%, white 25%, #008080 50%, white 75%, white 100%)",
+        backgroundSize: "200% 100%",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
+        animation: "shimmer 6s ease-in-out infinite"
+      }}>
+        True Form Store
+      </span>
+    </h2>
+    
+    <p 
+      style={{
+        fontSize: "1.1rem",
+        color: "white",
+        marginBottom: "60px",
+        maxWidth: "600px",
+        marginLeft: "auto",
+        marginRight: "auto",
+        lineHeight: "1.6"
+      }}
+    >
+      Access premium training programs, nutrition plans, and fitness resources designed to accelerate your transformation.
+    </p>
+
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gap: "40px",
+      marginBottom: "50px"
+    }}>
+      {/* Training Programs */}
+      <div style={{
+        backgroundColor: "white",
+        padding: "40px 30px",
+        borderRadius: "12px",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        cursor: "pointer",
+        userSelect: "none",
+        WebkitUserSelect: "none",
+        MozUserSelect: "none"
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "translateY(-5px)";
+        e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.12)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)";
+      }}>
+        <h3 style={{
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          color: "#008080",
+          marginBottom: "15px"
+        }}>
+          Training Programs
+        </h3>
+        <p style={{
+          color: "#666",
+          lineHeight: "1.6",
+          marginBottom: "20px"
+        }}>
+          Customized workout plans for all fitness levels, from beginner to advanced.
+        </p>
+        <div style={{
+          fontSize: "1.2rem",
+          fontWeight: "bold",
+          color: "#008080"
+        }}>
+          Starting at $29.99
+        </div>
+      </div>
+
+      {/* Meal Plans */}
+      <div style={{
+        backgroundColor: "white",
+        padding: "40px 30px",
+        borderRadius: "12px",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        cursor: "pointer",
+        userSelect: "none",
+        WebkitUserSelect: "none",
+        MozUserSelect: "none"
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "translateY(-5px)";
+        e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.12)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)";
+      }}>
+        <h3 style={{
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          color: "#008080",
+          marginBottom: "15px"
+        }}>
+          Meal Plans
+        </h3>
+        <p style={{
+          color: "#666",
+          lineHeight: "1.6",
+          marginBottom: "20px"
+        }}>
+          Custom meal plans and recipes designed to fuel your fitness goals.
+        </p>
+        <div style={{
+          fontSize: "1.2rem",
+          fontWeight: "bold",
+          color: "#008080"
+        }}>
+          Starting at $24.99
+        </div>
+      </div>
+
+      {/* Workout Guides */}
+      <div style={{
+        backgroundColor: "white",
+        padding: "40px 30px",
+        borderRadius: "12px",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        cursor: "pointer",
+        userSelect: "none",
+        WebkitUserSelect: "none",
+        MozUserSelect: "none"
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "translateY(-5px)";
+        e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.12)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)";
+      }}>
+        <h3 style={{
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          color: "#008080",
+          marginBottom: "15px"
+        }}>
+          Cookbooks
+        </h3>
+        <p style={{
+          color: "#666",
+          lineHeight: "1.6",
+          marginBottom: "20px"
+        }}>
+          Delicious and nutritious recipes to support your fitness journey.
+        </p>
+        <div style={{
+          fontSize: "1.2rem",
+          fontWeight: "bold",
+          color: "#008080"
+        }}>
+          Starting at $19.99
+        </div>
+      </div>
+    </div>
+
+    <a 
+      href="https://trueformstore.com" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-block",
+        padding: "20px 50px",
+        fontSize: "1.3rem",
+        fontWeight: "bold",
+        color: "white",
+        backgroundColor: "#008080",
+        borderRadius: "12px",
+        textDecoration: "none",
+        transition: "all 0.4s ease",
+        boxShadow: "0 6px 20px rgba(0, 128, 128, 0.4)",
+        position: "relative",
+        overflow: "hidden",
+        marginTop: "60px"
+      }}
+      onMouseEnter={(e) => {
+        e.target.style.transform = "translateY(-4px) scale(1.05)";
+        e.target.style.boxShadow = "0 10px 30px rgba(0, 128, 128, 0.5)";
+        e.target.style.backgroundColor = "#009999";
+        // Speed up ring animation on hover
+        const ring = e.target.querySelector('div');
+        if (ring) {
+          ring.style.animation = "ringRotate 2s ease-in-out infinite";
+        }
+      }}
+      onMouseLeave={(e) => {
+        e.target.style.transform = "translateY(0) scale(1)";
+        e.target.style.boxShadow = "0 6px 20px rgba(0, 128, 128, 0.4)";
+        e.target.style.backgroundColor = "#008080";
+        // Slow down ring animation on leave
+        const ring = e.target.querySelector('div');
+        if (ring) {
+          ring.style.animation = "ringRotate 4s ease-in-out infinite";
+        }
+      }}
+    >
+      <div style={{
+        position: "absolute",
+        top: "-3px",
+        left: "-3px",
+        right: "-3px",
+        bottom: "-3px",
+        borderRadius: "15px",
+        background: "linear-gradient(45deg, #008080, #00cccc, #008080, #00cccc)",
+        backgroundSize: "400% 400%",
+        animation: "ringRotate 4s ease-in-out infinite",
+        zIndex: "-1"
+      }}></div>
+      Visit Store
+    </a>
+  </div>
+</Element>
+
 
 {/* Introductory Section */}
 <Element 
@@ -374,7 +667,33 @@ function Home() {
     boxShadow: "none", // Removes any unnecessary shadow
     background: "transparent", // Removes the dark opacity
   }}>
-    <h2 className="section-title" style={{ color: "white" }}>Transformations</h2>
+    <h2 className="section-title" style={{ 
+      color: "white",
+      position: "relative",
+      overflow: "hidden",
+      display: "inline-block"
+    }}>
+      <span style={{
+        background: "linear-gradient(90deg, white 0%, white 25%, #008080 50%, white 75%, white 100%)",
+        backgroundSize: "200% 100%",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
+        animation: "shimmer 6s ease-in-out infinite"
+      }}>
+        Transformations
+      </span>
+      <span 
+        style={{
+          display: "block",
+          width: "60%",
+          height: "4px",
+          backgroundColor: "#008080",
+          margin: "10px auto 0",
+          borderRadius: "2px",
+        }}
+      ></span>
+    </h2>
     <Swiper
       pagination={{ clickable: true }}
       navigation={true}
@@ -492,14 +811,39 @@ function Home() {
   }}
 >
   <div className="trainer-content">
-    <h2 className="trainer-title">Meet Your Trainer</h2>
+    <h2 className="trainer-title" style={{
+      position: "relative",
+      overflow: "hidden",
+      display: "inline-block"
+    }}>
+      <span style={{
+        background: "linear-gradient(90deg, #008080 0%, #008080 25%, #333 50%, #008080 75%, #008080 100%)",
+        backgroundSize: "200% 100%",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
+        animation: "shimmer 6s ease-in-out infinite"
+      }}>
+        Meet Your Trainer
+      </span>
+      <span 
+        style={{
+          display: "block",
+          width: "60%",
+          height: "4px",
+          backgroundColor: "#008080",
+          margin: "10px auto 0",
+          borderRadius: "2px",
+        }}
+      ></span>
+    </h2>
     <h3 className="trainer-name">Andrew O'Ryan</h3>
     <p className="trainer-description">
-    As a fierce advocate for health and fitness, Andrew is highly dedicated to helping men achieve their true potential through a highly customized and comprehensive coaching experience. Andrew is a graduate of Ivey Business School and has experience working for some of the top-level real estate investment firms in Toronto. However, he left that world behind to pursue his passion for transforming lives through fitness.
+    As a fierce advocate for health and fitness, I'm highly dedicated to helping men achieve their true potential through a highly customized and comprehensive coaching experience. I'm a graduate of Ivey Business School and have experience working for some of the top-level real estate investment firms in Toronto. However, I left that world behind to pursue my passion for transforming lives through fitness.
 
 
     </p>
-    <p className="trainer-description">Driven by a deep desire to empower men to become the strongest versions of themselves—both physically and mentally—Andrew founded True Form Fitness Club. He believes that true transformation goes beyond just building muscle; it's about cultivating discipline, confidence, and a powerful mindset. Andrew’s mission is to guide men on their journey to excellence, equipping them with the tools and knowledge needed to conquer their goals both in and out of the gym.</p>
+    <p className="trainer-description">I am driven by a deep desire to empower men to become the strongest versions of themselves—both physically and mentally—I founded True Form Fitness Club. I believe that true transformation goes beyond just building muscle; it's about cultivating discipline, confidence, and a powerful mindset. My mission is to guide men on their journey to excellence, equipping them with the tools and knowledge needed to conquer their goals both in and out of the gym.</p>
     <p className="trainer-quote">
       <em>
       "I train ambitious men who demand results — turning goals into victories."
@@ -519,6 +863,9 @@ function Home() {
     <img src="/croppedCutout.png" alt="Andrew O'Ryan" />
   </div>
 </div>
+
+
+
 {/* Social Media Section */}
 <Element 
   name="social-media" 
@@ -540,20 +887,29 @@ function Home() {
     color: "white", 
     fontSize: "3.5rem", 
     marginBottom: "90px",
-    
     position: "relative", 
-    display: "inline-block", /* Ensures underline width matches text */
+    display: "inline-block",
+    overflow: "hidden"
   }}
 >
-  Socials
+  <span style={{
+    background: "linear-gradient(90deg, white 0%, white 25%, #008080 50%, white 75%, white 100%)",
+    backgroundSize: "200% 100%",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    animation: "shimmer 6s ease-in-out infinite"
+  }}>
+    Socials
+  </span>
   <span 
     style={{
       display: "block",
-      width: "60%", /* Adjust width */
-      height: "4px", /* Thickness of underline */
-      backgroundColor: "#008080", /* Teal color */
-      margin: "10px auto 0", /* Adds spacing */
-      borderRadius: "2px", /* Rounded corners */
+      width: "60%",
+      height: "4px",
+      backgroundColor: "#008080",
+      margin: "10px auto 0",
+      borderRadius: "2px",
     }}
   ></span>
 </h2>
@@ -605,7 +961,32 @@ function Home() {
       }}
     >
       <div className="contact-container">
-        <h2 className="contact-title">Get in Touch</h2>
+        <h2 className="contact-title" style={{
+          position: "relative",
+          overflow: "hidden",
+          display: "inline-block"
+        }}>
+          <span style={{
+            background: "linear-gradient(90deg, #333 0%, #333 25%, #008080 50%, #333 75%, #333 100%)",
+            backgroundSize: "200% 100%",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            animation: "shimmer 6s ease-in-out infinite"
+          }}>
+            Get in Touch
+          </span>
+          <span 
+            style={{
+              display: "block",
+              width: "60%",
+              height: "4px",
+              backgroundColor: "#008080",
+              margin: "10px auto 0",
+              borderRadius: "2px",
+            }}
+          ></span>
+        </h2>
         <p className="contact-description">
           Got questions? We'd love to hear from you. Connect with us today!
         </p>
