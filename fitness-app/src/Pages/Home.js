@@ -923,7 +923,7 @@ function Home() {
   }}>
     {/* Andrew O'Ryan Official Instagram */}
     <iframe 
-      src="https://www.instagram.com/andreworyanofficial/embed" 
+      src="https://www.instagram.com/andrew.oryan/embed" 
       className="instagram-frame"
       allowtransparency="true" 
       frameBorder="0"
